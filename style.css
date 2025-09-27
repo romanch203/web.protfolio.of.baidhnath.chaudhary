@@ -1,0 +1,371 @@
+.footer-copyright {
+    margin-top: 1.5rem;
+    font-size: 1.01rem;
+    color: var(--footer-text);
+    text-align: center;
+    letter-spacing: 0.01em;
+}
+.idcard-section {
+    margin: 2.5rem auto 1.5rem auto;
+    max-width: 480px;
+    background: var(--header-bg);
+    border-radius: 1.1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 1.5rem 2rem 1.2rem 2rem;
+    text-align: center;
+}
+.idcard-title {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+.idcard-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.1rem;
+}
+.idcard-image {
+    max-width: 100%;
+    width: 340px;
+    border-radius: 0.7rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    border: 2px solid var(--accent);
+}
+.idcard-download-btn {
+    display: inline-block;
+    margin-top: 0.7rem;
+    padding: 0.6rem 1.3rem;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1.08rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.idcard-download-btn:hover {
+    background: #003e7e;
+}
+.footer-notice {
+    margin-bottom: 1.2rem;
+}
+.footer-notice-main {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--accent);
+    display: block;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+.footer-contact {
+    margin-top: 0.7rem;
+    text-align: center;
+}
+.footer-contact-title {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: var(--header-text);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.footer-contact-detail {
+    font-size: 1.07rem;
+    font-weight: 500;
+    color: var(--primary-text);
+    display: block;
+    margin-bottom: 0.2rem;
+}
+.workexp-box {
+    background: var(--header-bg);
+    color: var(--primary-text);
+    border-radius: 1.1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 1.5rem 2rem 1.2rem 2rem;
+    margin-top: 2.2rem;
+    max-width: 480px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+.workexp-section {
+    margin-bottom: 1.5rem;
+}
+.workexp-title {
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-size: 1.09rem;
+}
+.workexp-list {
+    margin: 0 0 0 1.2rem;
+    padding: 0;
+    list-style: none;
+}
+.workexp-list li {
+    margin-bottom: 0.35rem;
+    font-size: 1.04rem;
+    letter-spacing: 0.01em;
+}
+.biodata-box {
+    background: var(--header-bg);
+    color: var(--primary-text);
+    border-radius: 1.1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 1.5rem 2rem;
+    margin-top: 0.5rem;
+    max-width: 420px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+.biodata-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.biodata-org {
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    color: var(--header-text);
+}
+.biodata-user, .biodata-type, .biodata-issuer, .biodata-address {
+    margin-bottom: 0.4rem;
+}
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 220px;
+    background: linear-gradient(135deg, var(--header-bg) 60%, var(--footer-bg) 100%);
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+}
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+}
+.flag-container {
+    width: 48px;
+    height: 52px;
+    margin-bottom: 0.2rem;
+    margin-left: 2px;
+    display: flex;
+    align-items: flex-start;
+}
+.nepal-flag {
+    width: 44px;
+    height: auto;
+    display: block;
+    animation: wave-flag 2.2s infinite linear;
+    transform-origin: left center;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10));
+}
+@keyframes wave-flag {
+    0% { transform: rotateZ(-2deg) skewY(2deg) scaleY(1.00); }
+    10% { transform: rotateZ(2deg) skewY(-2deg) scaleY(1.04); }
+    20% { transform: rotateZ(-3deg) skewY(3deg) scaleY(0.98); }
+    30% { transform: rotateZ(2deg) skewY(-2deg) scaleY(1.03); }
+    40% { transform: rotateZ(-2deg) skewY(2deg) scaleY(1.00); }
+    50% { transform: rotateZ(2deg) skewY(-2deg) scaleY(1.04); }
+    60% { transform: rotateZ(-3deg) skewY(3deg) scaleY(0.98); }
+    70% { transform: rotateZ(2deg) skewY(-2deg) scaleY(1.03); }
+    80% { transform: rotateZ(-2deg) skewY(2deg) scaleY(1.00); }
+    100% { transform: rotateZ(-2deg) skewY(2deg) scaleY(1.00); }
+}
+.header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 0;
+    min-width: 120px;
+    margin-top: 0.2rem;
+}
+.law-logo {
+    width: 90px;
+    height: auto;
+    border-radius: 50%;
+    background: var(--header-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 0.3rem;
+    transition: background 0.3s;
+}
+@media (max-width: 700px) {
+    .header-center {
+        margin: 0.5rem 0;
+    }
+    .law-logo {
+        width: 70px;
+    }
+}
+/* style.css - Professional, responsive, auto theme (dark/light), head space managed */
+:root {
+    --primary-bg: #f5f7fa;
+    --primary-text: #222;
+    --header-bg: #fff;
+    --header-text: #222;
+    --accent: #0057b7;
+    --footer-bg: #f1f1f1;
+    --footer-text: #555;
+}
+[data-theme="dark"] {
+    --primary-bg: #181a1b;
+    --primary-text: #f5f7fa;
+    --header-bg: #23272a;
+    --header-text: #f5f7fa;
+    --accent: #00b7c2;
+    --footer-bg: #23272a;
+    --footer-text: #aaa;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-bg);
+    color: var(--primary-text);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+}
+.site-header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding-bottom: 1rem;
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 0.5rem 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.lang-switch {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.lang-btn {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0 0.3rem;
+    transition: color 0.2s;
+}
+.lang-btn.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.datetime {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    min-width: 180px;
+    text-align: center;
+}
+.theme-toggle {
+    display: flex;
+    align-items: center;
+}
+#theme-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--accent);
+    transition: color 0.2s;
+}
+.header-content {
+    margin-top: 1.5rem;
+    padding: 0 2rem;
+    min-height: 80px;
+    /* More space for head content */
+}
+main#main-content {
+    padding: 2rem;
+    min-height: 400px;
+}
+.site-footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1.2rem 2rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+/* Additions for logo and Nepali text in head */
+.gov-logo {
+    width: 70px;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 340px;
+    min-width: 200px;
+    padding-right: 2rem;
+}
+.gov-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    word-break: break-word;
+}
+.header-top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.header-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.7rem;
+}
+@media (max-width: 700px) {
+    .header-top, .header-content, main#main-content, .site-footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .header-content {
+        min-height: 60px;
+    }
+    .header-top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    .header-left {
+        align-items: flex-start;
+        padding-right: 0;
+    }
+    .header-controls {
+        align-items: flex-start;
+    }
+}
