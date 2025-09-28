@@ -1,21 +1,7 @@
 // script.js - Theme, language, and Nepali time/date logic
 
 // Theme toggle
-const themeBtn = document.getElementById('theme-toggle-btn');
-const root = document.documentElement;
-function setTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-}
-function getPreferredTheme() {
-    return localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-}
-function toggleTheme() {
-    const current = root.getAttribute('data-theme');
-    setTheme(current === 'dark' ? 'light' : 'dark');
-}
-themeBtn.addEventListener('click', toggleTheme);
-setTheme(getPreferredTheme());
+// Theme logic removed
 
 // Language switch
 const langBtns = document.querySelectorAll('.lang-btn');
@@ -38,7 +24,13 @@ function updateNepalTime() {
     const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
     const nepalTime = new Date(utc + (nepalOffset * 60000));
     const dateStr = nepalTime.toLocaleDateString(currentLang === 'np' ? 'ne-NP' : 'en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
-    const timeStr = nepalTime.toLocaleTimeString(currentLang === 'np' ? 'ne-NP' : 'en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    let hours = nepalTime.getHours();
+    const minutes = nepalTime.getMinutes().toString().padStart(2, '0');
+    const seconds = nepalTime.getSeconds().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    const timeStr = `${hours.toString().padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
     document.getElementById('date').textContent = dateStr;
     document.getElementById('time').textContent = timeStr;
 }
