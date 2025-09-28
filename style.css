@@ -405,46 +405,49 @@ main#main-content {
 }
 @media (max-width: 600px) {
     .main-nav {
+        flex-direction: row !important;
         gap: 0.5rem;
         padding: 0.5rem 0;
         font-size: 0.98rem;
+        justify-content: center;
+        align-items: center;
     }
     .nav-btn {
         padding: 0.25rem 0.5rem;
         font-size: 1rem;
         min-width: 60px;
         text-align: center;
+        border-radius: 0.7rem;
+        margin: 0;
     }
 }
 @media (max-width: 400px) {
     .main-nav {
-        flex-direction: column;
+        flex-direction: row !important;
         gap: 0.2rem;
-        align-items: stretch;
+        align-items: center;
     }
     .nav-btn {
         border-radius: 0.5rem;
-        margin: 0.1rem 0;
+        margin: 0;
     }
 }
-@media (max-width: 700px) {
-    .header-top, .header-content, main#main-content, .site-footer {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    .header-content {
-        min-height: 60px;
-    }
-    .header-top {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-    }
-    .header-left {
-        align-items: flex-start;
-        padding-right: 0;
-    }
-    .header-controls {
-        align-items: flex-start;
+
+/* Ensure all layout sections remain side-by-side or stacked as on PC */
+body, .site-header, .header-top, .header-content, .main-nav, .profile-section, .workexp-box, .site-footer {
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+
+.profile-image-container, .biodata-box, .workexp-box, .idcard-section {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Prevent excessive shrinking of content on mobile */
+@media (max-width: 600px) {
+    .biodata-box, .workexp-box, .idcard-section {
+        padding: 1rem 0.5rem;
+        max-width: 98vw;
     }
 }
