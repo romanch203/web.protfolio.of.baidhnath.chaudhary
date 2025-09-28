@@ -379,6 +379,30 @@ main#main-content {
     align-items: flex-end;
     gap: 0.7rem;
 }
+/* Navigation Bar Styles */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    background: #f8f8f8;
+    padding: 0.7rem 0 0.7rem 0;
+    border-radius: 0 0 1.2rem 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    margin-top: 0.2rem;
+}
+.nav-btn {
+    font-size: 1.13rem;
+    font-weight: 600;
+    color: #0057b7;
+    text-decoration: none;
+    padding: 0.3rem 1.2rem;
+    border-radius: 0.7rem;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-btn:hover, .nav-btn:focus {
+    background: #e3eaff;
+    color: #222;
+}
 @media (max-width: 700px) {
     .header-top, .header-content, main#main-content, .site-footer {
         padding-left: 1rem;

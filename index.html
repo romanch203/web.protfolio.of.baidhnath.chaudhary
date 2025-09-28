@@ -8,7 +8,7 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header class="site-header">
+    <header class="site-header" id="home">
         <div class="header-top">
             <div class="header-left">
 
@@ -18,7 +18,7 @@
                     नेपाल सरकार अन्तर्गत<br>
                     भूमि व्यवस्था, सहकारी तथा गरिबी निवारण मन्त्रालय<br>
                     नापी, भूमि व्यवस्थापन तथा अभिलेख विभाग<br>
-                    सो ई.कई सबै विभाग मार्फत सबै (काज/काम) गरिने हुने ।
+                    सो ई.कई सबै विभाग मार्फत सबै (काज/काम) गरिने हुने।
                 </div>
             </div>
             <div class="header-center">
@@ -43,9 +43,15 @@
         <div class="header-content">
             <!-- More head content will be added here as per your instructions -->
         </div>
+        <nav class="main-nav">
+            <a href="#home" class="nav-btn">Home</a>
+            <a href="#profile" class="nav-btn">Profile</a>
+            <a href="#services" class="nav-btn">Services</a>
+            <a href="#contact" class="nav-btn">Contact</a>
+        </nav>
     </header>
     <main id="main-content">
-    <section class="profile-section">
+    <section class="profile-section" id="profile">
             <div class="profile-image-container">
                 <img src="profile-photo.png.png" alt="Officer Photo" class="profile-image">
             </div>
@@ -58,7 +64,7 @@
                 <div class="biodata-address"><strong>ठेगाना:</strong> रामपुर विर्ता - ३, सिराहा, सगरमाथा</div>
             </div>
             <div class="workexp-box">
-                <div class="workexp-section">
+                <div class="workexp-section" id="services">
                     <div class="workexp-title">क) सेवा सम्बन्धित:</div>
                     <ul class="workexp-list">
                         <li>- लिखत पारित</li>
@@ -102,7 +108,7 @@
             </div>
         </section>
     </main>
-    <footer class="site-footer">
+    <footer class="site-footer" id="contact">
         <div class="idcard-section">
             <div class="idcard-title">मेरो  (visiting Card र ID card)  - डाउनलोड गर्नुहोस्:<br>परिपत्र -</div>
             <a href="digital-visiting-card.zip" download class="idcard-download-btn">Digital Visiting Card</a>
