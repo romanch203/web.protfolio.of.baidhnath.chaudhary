@@ -1,3 +1,29 @@
+.flag-gif-container {
+    width: 54px;
+    height: 60px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.2rem;
+}
+.nepal-flag-gif {
+    width: 50px;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+    background: var(--header-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 0.1rem;
+}
+.law-logo-large {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background: var(--header-bg);
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    padding: 0.4rem;
+}
 .footer-copyright {
     margin-top: 1.5rem;
     font-size: 1.01rem;
