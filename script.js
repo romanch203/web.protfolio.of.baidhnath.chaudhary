@@ -36,36 +36,3 @@ function updateNepalTime() {
 }
 setInterval(updateNepalTime, 1000);
 updateNepalTime();
-
-// Force fresh ZIP download (mobile browsers often cache same-named files)
-const visitingZipLink = document.querySelector('a[href$="digital-visiting-card.zip"]');
-if (visitingZipLink) {
-    visitingZipLink.addEventListener('click', async (e) => {
-        e.preventDefault();
-
-        const rawHref = visitingZipLink.getAttribute('href') || 'digital-visiting-card.zip';
-        const url = new URL(rawHref, window.location.href);
-        url.searchParams.set('v', Date.now().toString());
-
-        try {
-            const response = await fetch(url.toString(), { cache: 'no-store' });
-            if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-            const blob = await response.blob();
-            const blobUrl = URL.createObjectURL(blob);
-
-            const a = document.createElement('a');
-            a.href = blobUrl;
-            const desiredName = (visitingZipLink.getAttribute('download') || '').trim();
-            a.download = desiredName || 'digital-visiting-card.zip';
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-
-            setTimeout(() => URL.revokeObjectURL(blobUrl), 1500);
-        } catch (err) {
-            // Fallback to normal navigation download
-            window.location.href = url.toString();
-        }
-    });
-}
