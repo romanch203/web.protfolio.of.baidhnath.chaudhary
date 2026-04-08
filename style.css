@@ -168,6 +168,9 @@
 .biodata-box {
     background: var(--header-bg);
     color: var(--primary-text);
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
     border-radius: 1.1rem;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
     padding: 1.5rem 2rem;
@@ -177,6 +180,22 @@
     text-align: left;
     font-size: 1.08rem;
     line-height: 1.7;
+}
+.biodata-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("Rhododendron-min.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% auto;
+    opacity: 0.10;
+    pointer-events: none;
+    z-index: 0;
+}
+.biodata-box > * {
+    position: relative;
+    z-index: 1;
 }
 .biodata-quote {
     font-size: 1.1rem;
@@ -208,16 +227,7 @@
     margin-bottom: 2rem;
 }
 .profile-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("Rhododendron-min.jpg");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% auto;
-    opacity: 0.10;
-    pointer-events: none;
-    z-index: 2;
+    content: none;
 }
 .profile-section > * {
     position: relative;
