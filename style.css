@@ -1,9 +1,19 @@
 .flag-gif-container {
-    width: 54px;
-    height: 60px;
+    width: auto;
+    height: auto;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    gap: 0.4rem;
     margin-bottom: 0.2rem;
+}
+.nepal-2020-img {
+    width: 60px;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+    background: var(--header-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 0.1rem;
 }
 .nepal-flag-gif {
     width: 50px;
@@ -119,6 +129,26 @@
 .workexp-section {
     margin-bottom: 1.5rem;
 }
+#services {
+    position: relative;
+    overflow: hidden;
+}
+#services::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("cow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 130%;
+    opacity: 0.10;
+    pointer-events: none;
+    z-index: 0;
+}
+#services > * {
+    position: relative;
+    z-index: 1;
+}
 .workexp-title {
     font-weight: 700;
     color: var(--accent);
@@ -155,6 +185,10 @@
     margin-bottom: 1rem;
     text-align: center;
 }
+.biodata-box .law-logo {
+    display: block;
+    margin: 0.75rem auto 1.1rem auto;
+}
 .biodata-org {
     font-weight: 600;
     margin-bottom: 0.7rem;
@@ -167,8 +201,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow: hidden;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+.profile-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("Rhododendron-min.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 0;
+}
+.profile-section > * {
+    position: relative;
+    z-index: 1;
 }
 .profile-image-container {
     display: flex;
@@ -275,12 +327,29 @@ html, body {
     color: var(--header-text);
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     padding-bottom: 0.2rem;
+    position: relative;
+}
+.site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("nepal.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: 0;
+}
+.site-header > * {
+    position: relative;
+    z-index: 1;
 }
 .header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem 0.5rem 2rem;
+    padding: 0.7rem 2rem 0.3rem 2rem;
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -308,6 +377,18 @@ html, body {
     min-width: 180px;
     text-align: center;
 }
+.opi-logo {
+    display: block;
+    max-width: 200px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    margin: 0.35rem auto 0;
+    border-radius: 0.5rem;
+    background: var(--header-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 0.1rem;
+}
 .theme-toggle {
     display: flex;
     align-items: center;
@@ -326,6 +407,9 @@ html, body {
     min-height: 80px;
     /* More space for head content */
 }
+.header-content:empty {
+    display: none;
+}
 main#main-content {
     padding: 2rem;
     min-height: 400px;
@@ -337,6 +421,26 @@ main#main-content {
     padding: 1.2rem 2rem;
     font-size: 1rem;
     margin-top: 2rem;
+}
+#contact {
+    position: relative;
+    overflow: hidden;
+}
+#contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("Map.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.10;
+    pointer-events: none;
+    z-index: 0;
+}
+#contact > * {
+    position: relative;
+    z-index: 1;
 }
 /* Additions for logo and Nepali text in head */
 .gov-logo {
@@ -363,7 +467,7 @@ main#main-content {
     font-weight: 600;
     color: var(--accent);
     line-height: 1.5;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     word-break: break-word;
 }
 .header-top {
